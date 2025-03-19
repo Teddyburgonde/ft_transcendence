@@ -6,19 +6,19 @@ Etapes pour avoir un back fonctionnel: <br>
 
 ✅ 1. Installer Node.js et SQLite ✅ <br>
 ✅ 2. Initialiser le projet avec npm init -y ✅ <br> 
-✅ 3. Installer les dépendances (fastify, sqlite3, etc.) ✅ <br>
+✅ 3. Installer les dépendances (fastify, sqlite3, etc.) ✅ <br> <br>
 
 2️⃣ Configuration de la base de données (db.js) <br> <br>
 
 ✅ 4. Créer un fichier db.js ✅ <br>
 ✅ 5. Connecter SQLite et ouvrir database.db ✅ <br>
 ✅ 6. Créer les tables users et scores si elles n’existent pas ✅ <br>
-✅ 7. Exporter db pour l’utiliser dans les autres fichiers ✅ <br>
+✅ 7. Exporter db pour l’utiliser dans les autres fichiers ✅ <br> <br>
 
 3️⃣ Structuration du projet <br> <br>
 
 ✅ 8. Créer un dossier routes/ pour organiser les routes (users.js, scores.js) ✅ <br>
-✅ 9. Créer un dossier crud/ pour séparer la logique des requêtes SQL (postUser.js, getUsers.js, etc.) ✅ <br>
+✅ 9. Créer un dossier crud/ pour séparer la logique des requêtes SQL (postUser.js, getUsers.js, etc.) ✅ <br> <br>
 
 4️⃣ Création des routes API (users.js & scores.js) <br> <br>
 
@@ -31,7 +31,7 @@ Etapes pour avoir un back fonctionnel: <br>
 📌 Routes /scores : <br>
 ❌ 15. POST /scores → Ajouter un score <br>
 ❌ 16. GET /scores → Récupérer tous les scores <br>
-❌ 17. GET /scores/:id → Récupérer les scores d’un utilisateur <br>
+❌ 17. GET /scores/:id → Récupérer les scores d’un utilisateur <br> <br>
 
 5️⃣ Mise en production et optimisation <br> <br>
 
