@@ -40,6 +40,9 @@ Etapes pour avoir un back fonctionnel: <br>
 ❌ 20. Dockeriser le projet avec Dockerfile et docker-compose.yml <br>
 ❌ 21. Configurer un système d'authentification (ex: Token JWT, 2FA si nécessaire) <br>
 
+<br>
+<br>
+<br>
 
 Commandes utiles :
 
