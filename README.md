@@ -1,103 +1,49 @@
 # ft_transcendance
 
-Commande utiles :
+Etapes pour avoir un back fonctionnel: 
+
+1️⃣ Initialisation du projet
+
+✅ 1. Installer Node.js et SQLite ✅
+✅ 2. Initialiser le projet avec npm init -y ✅
+✅ 3. Installer les dépendances (fastify, sqlite3, etc.) ✅
+
+2️⃣ Configuration de la base de données (db.js)
+
+✅ 4. Créer un fichier db.js ✅
+✅ 5. Connecter SQLite et ouvrir database.db ✅
+✅ 6. Créer les tables users et scores si elles n’existent pas ✅
+✅ 7. Exporter db pour l’utiliser dans les autres fichiers ✅
+
+3️⃣ Structuration du projet
+
+✅ 8. Créer un dossier routes/ pour organiser les routes (users.js, scores.js) ✅
+✅ 9. Créer un dossier crud/ pour séparer la logique des requêtes SQL (postUser.js, getUsers.js, etc.) ✅
+
+4️⃣ Création des routes API (users.js & scores.js)
+
+🔄 10. POST /users → Ajouter un utilisateur (En cours...)
+❌ 11. GET /users → Récupérer tous les utilisateurs
+❌ 12. GET /users/:id → Récupérer un utilisateur spécifique
+❌ 13. PUT /users/:id → Mettre à jour un utilisateur
+❌ 14. DELETE /users/:id → Supprimer un utilisateur
+
+📌 Routes /scores :
+❌ 15. POST /scores → Ajouter un score
+❌ 16. GET /scores → Récupérer tous les scores
+❌ 17. GET /scores/:id → Récupérer les scores d’un utilisateur
+
+5️⃣ Mise en production et optimisation
+
+❌ 18. Ajouter la gestion des erreurs pour chaque route
+❌ 19. Protéger les données sensibles (ex: ne jamais renvoyer les mots de passe)
+❌ 20. Dockeriser le projet avec Dockerfile et docker-compose.yml
+❌ 21. Configurer un système d'authentification (ex: Token JWT, 2FA si nécessaire)
+
+
+Commandes utiles :
 
 - Lancer le server:
 node server
 - Aller sur la page d'accueil: <br>
 http://localhost:3000
-
-
-
-
-
-
-
-
-
-
-
-
-# Installation d'un backend avec Fastify
-
-## Étapes de configuration
-
-1. **Installer Node.js et npm**  ❌
-   Téléchargez et installez Node.js depuis le site officiel : [https://nodejs.org/](https://nodejs.org/).
-
-2. **Créer un dossier pour le projet**  ❌
-   ```bash
-   mkdir mon-projet-backend
-   cd mon-projet-backend
-   ```
-
-3. **Initialiser le projet avec `npm init`**  ❌
-   ```bash
-   npm init -y
-   ```
-
-4. **Installer Fastify**  ❌
-   ```bash
-   npm install fastify
-   ```
-
-5. **Créer le fichier d'entrée `server.js`**  ❌
-   Créez un fichier nommé `server.js` à la racine de votre projet.
-
-6. **Configurer le serveur de base avec Fastify**  ❌
-   Exemple de configuration de base :
-   ```javascript
-   const fastify = require('fastify')();
-
-   fastify.get('/api/hello', async (request, reply) => {
-       return { message: 'Hello, world!' };
-   });
-
-   fastify.listen(3000, (err, address) => {
-       if (err) {
-           console.error(err);
-           process.exit(1);
-       }
-       console.log(`Server running at ${address}`);
-   });
-   ```
-
-7. **Ajouter les routes nécessaires** ❌
-   - Ajoutez vos routes API pour les différentes fonctionnalités.
-
-8. **Installer et configurer une base de données**  ❌
-   - Exemple : installer SQLite
-   ```bash
-   npm install sqlite3   # Pour SQLite
-   ```
-
-9. **Configurer les middlewares (si besoin)**  ❌
-   - Ajoutez des middlewares pour la gestion des requêtes (ex. CORS, JSON parsing).
-
-10. **Ajouter la gestion des erreurs** ❌
-    - Gérez les erreurs globales dans le serveur.
-
-11. **Tester le serveur localement**  ❌
-    ```bash
-    node server.js
-    ```
-
-12. **Ajouter les fonctionnalités supplémentaires**  ❌
-    - Exemple : connexion à la base de données, authentification, validation des données, etc.
-
-13. **Configurer les variables d'environnement**  ❌
-    - Créez un fichier `.env` pour stocker les variables sensibles.
-
-14. **Tester et optimiser le backend** ❌
-    - Effectuez des tests unitaires et fonctionnels.
-
-15. **Préparer le déploiement (si nécessaire)**   ❌
-    - Préparez votre backend pour le déploiement (ex. Docker, configuration serveur).
-
-## Lancer le serveur ❌
-```bash
-node server.js
-```
-
-## Félicitations ! 🎉 ❌
-Vous avez maintenant un backend fonctionnel avec Fastify !
