@@ -1,1 +1,0 @@
-{"version":3,"file":"bearer.js","sourceRoot":"","sources":["../../src/auth-types/bearer.ts"],"names":[],"mappings":";AAAA;;;EAGE;;;AAEF,SAAgB,MAAM,CAAC,GAA4B;IAClD,MAAM,GAAG,GAAG,eAAe,CAAC;IAC5B,MAAM,KAAK,GAAG,UAAU,GAAG,CAAC,OAAO,CAAC,EAAE,CAAC;IAEvC,OAAO,CAAC,CAAC,GAAG,EAAE,KAAK,CAAC,CAAC,CAAC;AACvB,CAAC;AALD,wBAKC"}

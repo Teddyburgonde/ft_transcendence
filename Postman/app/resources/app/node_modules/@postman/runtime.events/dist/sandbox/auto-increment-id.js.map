@@ -1,1 +1,0 @@
-{"version":3,"file":"auto-increment-id.js","sourceRoot":"","sources":["../../src/sandbox/auto-increment-id.ts"],"names":[],"mappings":";;AAAA,MAAqB,eAAe;IAGnC;QACC,IAAI,CAAC,MAAM,GAAG,CAAC,CAAC;IACjB,CAAC;IAED,UAAU;QACT,MAAM,EAAE,GAAG,IAAI,CAAC,MAAM,EAAE,CAAC;QACzB,OAAO,EAAE,CAAC,QAAQ,EAAE,CAAC;IACtB,CAAC;CACD;AAXD,kCAWC"}
