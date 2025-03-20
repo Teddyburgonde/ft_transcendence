@@ -1,0 +1,1 @@
+window.SDK_PLATFORM=__SDK_PLATFORM__||"desktop",window.disableScratchpadForSignedIn=!1,document.addEventListener("dragover",(e=>{e.preventDefault()}),!1),document.addEventListener("drop",(e=>{e.preventDefault()}),!1);

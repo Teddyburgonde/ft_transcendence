@@ -1,4 +1,4 @@
-import db from './db.js';
+import db from '../db.js';
 
 
 const addUserHandler = (req, reply) =>
@@ -45,5 +45,4 @@ const addUserOpts=
 	handler: addUserHandler,
 };
 	
-// create routes and use a constant that we've put a schema and a function in 
-fastify.post('/users', addUserOpts);
+export { addUserHandler, addUserSchema };

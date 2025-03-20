@@ -1,27 +1,14 @@
-export default async function usersRoutes(fastify, options) {
-	fastify.route({
-		method: 'GET',
-		url: '/users',
-		schema: {
-		querystring: {
-			type: 'object',
-			properties: {
-			name: { type: 'string' },
-			excitement: { type: 'integer' }
-			}
-		},
-		response: {
-			200: {
-			type: 'object',
-			properties: {
-				hello: { type: 'string' }
-			}
-			}
-		}
-		},
-		handler: function (request, reply) 
-		{
-			reply.send("JE SUIS SUR LA PAGE USERS")
-		}
-	})
+import { addUserHandler, addUserSchema } from '../crud/postUser.js';
+
+export default async function usersRoutes(fastify, options) 
+{
+	fastify.post('/users', 
+	{
+		schema: addUserSchema,
+		handler: addUserHandler
+	});
+	fastify.get('/users', (request, reply) =>
+	{
+		reply.send("JE SUIS SUR LA PAGE USERS");
+	});
 }

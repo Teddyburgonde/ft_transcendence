@@ -1,4 +1,4 @@
-const sqlite3 = require('sqlite3').verbose();
+import sqlite3 from 'sqlite3';
 
 // Open database or create database if not exist
 
@@ -30,4 +30,4 @@ db.serialize(()=>
 	)`);
 });
 
-module.exports = db;
+export default db; 

@@ -46,7 +46,14 @@ Etapes pour avoir un back fonctionnel: <br> <br>
 
 Commandes utiles :
 
-- Lancer le server:
-node server
 - Aller sur la page d'accueil: <br>
 http://localhost:3000
+
+
+Liens utiles : 
+
+Pour le CRUD: 
+https://dev.to/elijahtrillionz/build-a-crud-api-with-fastify-688
+
+Doc officiel:
+https://fastify.dev/ 
