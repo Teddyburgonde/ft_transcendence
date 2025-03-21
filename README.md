@@ -55,32 +55,45 @@ Base de données:
 
 Si tu veux tester ton crud avec curl : 
 
-Method POST
+Method POST pour users
 Ajouter une row dans ta base de données avec curl: <br>
 exemple: <br>
 curl -X POST http://localhost:3000/users \
   -H "Content-Type: application/json" \
   -d '{"username": "pierre", "email": "pierre@example.com", "password": "123456"}'
 
-Method GET
+Method GET pour users
 Afficher la liste des rows dans ta base de données avec curl:<br>
 curl http://localhost:3000/users | jq
 
 
-Method GET by ID
+Method GET by ID pour users
 Afficher la liste d'un row dans ta base de données avec curl:<br>
 curl http://localhost:3000/users/2 | jq
 
 
-Method Update
+Method Update pour users
 Update une row dans ta base de données avec curl:<br>
 curl -X PUT http://localhost:3000/users/1 \
   -H "Content-Type: application/json" \
   -d '{"username":"stan_updated","email":"stan@new.com","password":"supersecure"}' | jq
 
-Method delete
+Method delete pour users
 Delete une row dans ta base de données avec curl: <br>
 curl -X DELETE http://localhost:3000/users/1 | jq
+
+
+
+Method POST pour scores 
+Ajouter une row dans ta base de données avec curl: <br>
+exemple: <br>
+curl -X POST http://localhost:3000/scores \
+  -H "Content-Type: application/json" \
+  -d '{"user_id":1,"opponent_id":2,"score_user":5}' | jq
+
+
+Method GET pour scores
+
 
 
 - Regarder ce qu'il y a dans la tables: 
