@@ -1,6 +1,5 @@
 import db from '../db.js';
 
-
 const addUserHandler = (req, reply) =>
 {
 	const {username, email, password} = req.body;

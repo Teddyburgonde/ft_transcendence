@@ -1,9 +1,9 @@
 make:
-	docker-compose up --build -d
+	docker-compose up --build
 
 re:
 	docker-compose down --rmi all
-	docker-compose up --build -d
+	docker-compose up --build
 
 restart:
 	docker-compose down

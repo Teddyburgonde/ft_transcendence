@@ -1,4 +1,6 @@
 import { addUserHandler, addUserSchema } from '../crud/postUser.js';
+import { getAllUsersHandler } from '../crud/getUsers.js';
+import {  getUserById } from '../crud/getUserById.js'
 
 export default async function usersRoutes(fastify, options) 
 {
@@ -7,8 +9,6 @@ export default async function usersRoutes(fastify, options)
 		schema: addUserSchema,
 		handler: addUserHandler
 	});
-	fastify.get('/users', (request, reply) =>
-	{
-		reply.send("JE SUIS SUR LA PAGE USERS");
-	});
+	fastify.get('/users', getAllUsersHandler);
+	fastify.get('/users/:id', getUserById);
 }

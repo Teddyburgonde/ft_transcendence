@@ -23,9 +23,9 @@ Etapes pour avoir un back fonctionnel: <br> <br>
 4️⃣ Création des routes API (users.js & scores.js) <br> <br>
 
 ✅ 10. POST /users → Ajouter un utilisateur ✅ <br>
-🔄 11. GET /users → Récupérer tous les utilisateurs (En cours...) <br>
-❌ 12. GET /users/:id → Récupérer un utilisateur spécifique <br>
-❌ 13. PUT /users/:id → Mettre à jour un utilisateur <br>
+✅ 11. GET /users → Récupérer tous les utilisateurs ✅ <br>
+✅ 12. GET /users/:id → Récupérer un utilisateur spécifique ✅ <br>
+🔄 13. PUT /users/:id → Mettre à jour un utilisateur (En cours...) <br>
 ❌ 14. DELETE /users/:id → Supprimer un utilisateur <br>
 
 📌 Routes /scores : <br>
@@ -53,12 +53,23 @@ http://localhost:3000
 
 Base de données: 
 
+Si tu veux tester ton crud avec curl : 
 
-Ajouter une raw dans ta base de données avec curl: <br>
+Method POST
+Ajouter une row dans ta base de données avec curl: <br>
 exemple: <br>
 curl -X POST http://localhost:3000/users \
   -H "Content-Type: application/json" \
   -d '{"username": "roger1", "email": "roger1@example.com", "password": "123456"}'
+
+Method GET
+Afficher la liste des rows dans ta base de données avec curl:<br>
+curl http://localhost:3000/users | jq
+
+
+Method GET by ID
+Afficher la liste d'un row dans ta base de données avec curl:<br>
+curl http://localhost:3000/users/2 | jq
 
 
 - Regarder ce qu'il y a dans la tables: 
