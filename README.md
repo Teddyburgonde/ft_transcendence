@@ -72,6 +72,14 @@ Afficher la liste d'un row dans ta base de données avec curl:<br>
 curl http://localhost:3000/users/2 | jq
 
 
+Method Update
+Update une row dans ta base de données avec curl:<br>
+curl -X PUT http://localhost:3000/users/1 \
+  -H "Content-Type: application/json" \
+  -d '{"username":"stan_updated","email":"stan@new.com","password":"supersecure"}' | jq
+
+
+
 - Regarder ce qu'il y a dans la tables: 
 sqlite3 database.db <br>
 SELECT * FROM nameoftable; <br>
