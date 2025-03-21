@@ -93,6 +93,8 @@ curl -X POST http://localhost:3000/scores \
 
 
 Method GET pour scores
+Afficher la liste des rows dans ta base de données avec curl:<br>
+curl http://localhost:3000/scores | jq
 
 
 
