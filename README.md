@@ -60,7 +60,7 @@ Ajouter une row dans ta base de données avec curl: <br>
 exemple: <br>
 curl -X POST http://localhost:3000/users \
   -H "Content-Type: application/json" \
-  -d '{"username": "roger1", "email": "roger1@example.com", "password": "123456"}'
+  -d '{"username": "pierre", "email": "pierre@example.com", "password": "123456"}'
 
 Method GET
 Afficher la liste des rows dans ta base de données avec curl:<br>

@@ -1,6 +1,8 @@
 import { addUserHandler, addUserSchema } from '../crud/postUser.js';
 import { getAllUsersHandler } from '../crud/getUsers.js';
-import {  getUserById } from '../crud/getUserById.js'
+import { getUserById } from '../crud/getUserById.js'
+import { updateUser } from '../crud/updateUser.js'
+
 
 export default async function usersRoutes(fastify, options) 
 {
@@ -11,4 +13,5 @@ export default async function usersRoutes(fastify, options)
 	});
 	fastify.get('/users', getAllUsersHandler);
 	fastify.get('/users/:id', getUserById);
+	fastify.put('/users/:id', updateUser )
 }
