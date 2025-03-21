@@ -1,5 +1,7 @@
 FROM node:18
 
+RUN apt update && apt install -y sqlite3
+
 WORKDIR /usr/src/app
 
 COPY package*.json ./

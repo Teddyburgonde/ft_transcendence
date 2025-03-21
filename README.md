@@ -22,8 +22,8 @@ Etapes pour avoir un back fonctionnel: <br> <br>
 
 4️⃣ Création des routes API (users.js & scores.js) <br> <br>
 
-🔄 10. POST /users → Ajouter un utilisateur (En cours...) <br>
-❌ 11. GET /users → Récupérer tous les utilisateurs <br>
+✅ 10. POST /users → Ajouter un utilisateur ✅ <br>
+🔄 11. GET /users → Récupérer tous les utilisateurs (En cours...) <br>
 ❌ 12. GET /users/:id → Récupérer un utilisateur spécifique <br>
 ❌ 13. PUT /users/:id → Mettre à jour un utilisateur <br>
 ❌ 14. DELETE /users/:id → Supprimer un utilisateur <br>
@@ -44,10 +44,27 @@ Etapes pour avoir un back fonctionnel: <br> <br>
 <br>
 <br>
 
-Commandes utiles :
+Commandes utiles:
 
 - Aller sur la page d'accueil: <br>
 http://localhost:3000
+
+
+
+Base de données: 
+
+
+Ajouter une raw dans ta base de données avec curl: <br>
+exemple: <br>
+curl -X POST http://localhost:3000/users \
+  -H "Content-Type: application/json" \
+  -d '{"username": "roger1", "email": "roger1@example.com", "password": "123456"}'
+
+
+- Regarder ce qu'il y a dans la tables: 
+sqlite3 database.db <br>
+SELECT * FROM nameoftable; <br>
+
 
 
 Liens utiles : 
