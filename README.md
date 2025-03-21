@@ -29,9 +29,11 @@ Etapes pour avoir un back fonctionnel: <br> <br>
 ✅ 14. DELETE /users/:id → Supprimer un utilisateur ✅ <br>
 
 📌 Routes /scores : <br>
-🔄 15. POST /scores → Ajouter un score (en cours...)<br>
-❌ 16. GET /scores → Récupérer tous les scores <br>
-❌ 17. GET /scores/:id → Récupérer les scores d’un utilisateur <br> <br>
+✅ 15. POST /scores → Ajouter un score ✅<br>
+✅ 16. GET /scores → Récupérer tous les scores ✅<br>
+✅ 17. GET /scores/:id → Récupérer les scores d’un utilisateur ✅<br>
+🔄 18. DELETE /scores/:id → Supprimer un score (en cours...)<br>
+ <br>
 
 5️⃣ Mise en production et optimisation <br> <br>
 
