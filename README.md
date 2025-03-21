@@ -96,6 +96,15 @@ Method GET pour scores
 Afficher la liste des rows dans ta base de données avec curl:<br>
 curl http://localhost:3000/scores | jq
 
+Method GET by ID pour users
+Afficher la liste d'un row dans ta base de données avec curl:<br>
+curl http://localhost:3000/scores/user/1 | jq
+
+
+Method delete pour scores
+Delete une row dans ta base de données avec curl: <br>
+curl -X DELETE http://localhost:3000/scores/1 | jq
+
 
 
 - Regarder ce qu'il y a dans la tables: 
