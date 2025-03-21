@@ -25,11 +25,11 @@ Etapes pour avoir un back fonctionnel: <br> <br>
 ✅ 10. POST /users → Ajouter un utilisateur ✅ <br>
 ✅ 11. GET /users → Récupérer tous les utilisateurs ✅ <br>
 ✅ 12. GET /users/:id → Récupérer un utilisateur spécifique ✅ <br>
-🔄 13. PUT /users/:id → Mettre à jour un utilisateur (En cours...) <br>
-❌ 14. DELETE /users/:id → Supprimer un utilisateur <br>
+✅ 13. PUT /users/:id → Mettre à jour un utilisateur ✅ <br>
+✅ 14. DELETE /users/:id → Supprimer un utilisateur ✅ <br>
 
 📌 Routes /scores : <br>
-❌ 15. POST /scores → Ajouter un score <br>
+🔄 15. POST /scores → Ajouter un score (en cours...)<br>
 ❌ 16. GET /scores → Récupérer tous les scores <br>
 ❌ 17. GET /scores/:id → Récupérer les scores d’un utilisateur <br> <br>
 
@@ -78,6 +78,9 @@ curl -X PUT http://localhost:3000/users/1 \
   -H "Content-Type: application/json" \
   -d '{"username":"stan_updated","email":"stan@new.com","password":"supersecure"}' | jq
 
+Method delete
+Delete une row dans ta base de données avec curl: <br>
+curl -X DELETE http://localhost:3000/users/1 | jq
 
 
 - Regarder ce qu'il y a dans la tables: 
