@@ -51,7 +51,14 @@ Etapes pour avoir un back fonctionnel: <br> <br>
 <br>
 <br>
 <br>
-
+A FAIRE DEMAIN 23 mars 2025
+-------------
+✅ 1. Récupérer username, email, password	depuis request.body
+🔐 2. Hasher le mot de passe	avec bcrypt.hash()
+🔍 3. Vérifier si l’email existe déjà	requête SELECT * FROM users WHERE email = ?
+🗃️ 4. Insérer le nouvel utilisateur	dans la base (db.run(...))
+📩 5. Renvoyer une réponse JSON	ex : { message: "User registered" }
+----------
 Commandes utiles:
 
 - Aller sur la page d'accueil: <br>
