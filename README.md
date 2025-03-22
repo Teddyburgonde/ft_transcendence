@@ -125,6 +125,10 @@ SELECT * FROM nameoftable; <br>
 
 
 
+CROQUIS : 
+
+
+
 Liens utiles : 
 
 Pour le CRUD: 
