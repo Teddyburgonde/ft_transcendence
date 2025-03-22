@@ -32,15 +32,16 @@ Etapes pour avoir un back fonctionnel: <br> <br>
 ✅ 15. POST /scores → Ajouter un score ✅<br>
 ✅ 16. GET /scores → Récupérer tous les scores ✅<br>
 ✅ 17. GET /scores/:id → Récupérer les scores d’un utilisateur ✅<br>
-🔄 18. DELETE /scores/:id → Supprimer un score (en cours...)<br>
+✅ 18. DELETE /scores/:id → Supprimer un score ✅<br>
  <br>
 
 5️⃣ Mise en production et optimisation <br> <br>
 
-❌ 18. Ajouter la gestion des erreurs pour chaque route <br>
-❌ 19. Protéger les données sensibles (ex: ne jamais renvoyer les mots de passe) <br>
-❌ 20. Dockeriser le projet avec Dockerfile et docker-compose.yml <br>
-❌ 21. Configurer un système d'authentification (ex: Token JWT, 2FA si nécessaire) <br>
+✅ 19. Configurer un système d'authentification (ex: Token JWT) pour login ✅
+❌ 20. Authentification 2FA <br>
+❌ 21. Ajouter la gestion des erreurs pour chaque route <br>
+✅ 22. Protéger les données sensibles (ex: ne jamais renvoyer les mots de passe) <br>
+✅  23. Dockeriser le projet avec Dockerfile et docker-compose.yml ✅ <br>
 
 <br>
 <br>
@@ -107,6 +108,10 @@ Method delete pour scores
 Delete une row dans ta base de données avec curl: <br>
 curl -X DELETE http://localhost:3000/scores/1 | jq
 
+Pour tester authentification JWT
+curl -X POST http://localhost:3000/login \
+  -H "Content-Type: application/json" \
+  -d '{"email": "stan@new.com", "password": "supersecure"}'
 
 
 - Regarder ce qu'il y a dans la tables: 

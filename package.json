@@ -11,6 +11,8 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@fastify/jwt": "^9.1.0",
+    "dotenv": "^16.4.7",
     "fastify": "^5.2.1",
     "sqlite3": "^5.1.7"
   }
