@@ -13,9 +13,23 @@ export default async function usersRoutes(fastify, options)
 		schema: addUserSchema,
 		handler: addUserHandler
 	});
-	fastify.get('/users', getAllUsersHandler);
-	fastify.get('/users/:id', getUserById);
-	fastify.put('/users/:id', updateUser )
-	fastify.delete('/users/:id', deleteUserById);
+	fastify.get('/users', 
+	{
+		// fastify.authenticate checks whether a JWT token is present
+		// in the headers and if it is valid (signed with the correct secret key)
+		preHandler: fastify.authenticate
+	},	getAllUsersHandler);
+	fastify.get('/users/:id', 
+	{
+		preHandler: fastify.authenticate
+	},	getUserById);
+	fastify.put('/users/:id', 
+	{
+		preHandler: fastify.authenticate
+	},	updateUser )
+	fastify.delete('/users/:id',
+	{
+		preHandler: fastify.authenticate
+	},	deleteUserById);
 	fastify.post('/login', loginUserHandler);
 }

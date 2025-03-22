@@ -42,6 +42,11 @@ Etapes pour avoir un back fonctionnel: <br> <br>
 ❌ 21. Ajouter la gestion des erreurs pour chaque route <br>
 ✅ 22. Protéger les données sensibles (ex: ne jamais renvoyer les mots de passe) <br>
 ✅  23. Dockeriser le projet avec Dockerfile et docker-compose.yml ✅ <br>
+✅ 24. Protéger les routes privées avec preHandler: fastify.authenticate <br> ✅
+❌ 25. Créer une route /register pour permettre à un utilisateur de s’inscrire <br>
+❌ 26. Hasher le mot de passe dans /register avec bcrypt <br>
+❌ 27. Vérifier le mot de passe hashé dans /login avec bcrypt.compare() <br>
+❌ 28. Vérifier et uniformiser les erreurs (400, 401, 500, etc.) dans toutes les routes <br>
 
 <br>
 <br>
