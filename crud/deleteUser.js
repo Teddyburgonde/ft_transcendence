@@ -9,7 +9,7 @@ const deleteUserById = (request, reply) =>
 			return reply.status(500).send({ message: "Database error" });
 		if (this.changes === 0)
 			return reply.status(404).send({ message: "User not found" });
-		reply.send({ message: "User deleted successfully" });
+		return reply.status(200).send({ message: "User deleted successfully"});
 	})
 };
 

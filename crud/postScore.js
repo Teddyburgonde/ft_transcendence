@@ -9,7 +9,7 @@ const addScoreHandler = (req, reply) =>
 	{
 		if (err)
 			return reply.status(500).send({ message: "Database error" });
-		reply.send({ message: "Score added" });
+		return reply.status(200).send({ message: "Score added" });
 	});
 };
 	

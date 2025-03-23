@@ -38,27 +38,21 @@ Etapes pour avoir un back fonctionnel: <br> <br>
 5️⃣ Mise en production et optimisation <br> <br>
 
 ✅ 19. Configurer un système d'authentification (ex: Token JWT) pour login ✅
-❌ 20. Authentification 2FA <br>
-❌ 21. Ajouter la gestion des erreurs pour chaque route <br>
-✅ 22. Protéger les données sensibles (ex: ne jamais renvoyer les mots de passe) <br>
-✅  23. Dockeriser le projet avec Dockerfile et docker-compose.yml ✅ <br>
-✅ 24. Protéger les routes privées avec preHandler: fastify.authenticate <br> ✅
-✅ 25. Créer une route /register pour permettre à un utilisateur de s’inscrire <br> ✅
-✅ 26. Hasher le mot de passe dans /register avec bcrypt <br>
-❌ 27. Vérifier le mot de passe hashé dans /login avec bcrypt.compare() <br>
-❌ 28. Vérifier et uniformiser les erreurs (400, 401, 500, etc.) dans toutes les routes <br>
+✅ 20. Ajouter la gestion des erreurs pour chaque route <br>
+✅ 21. Protéger les données sensibles (ex: ne jamais renvoyer les mots de passe) <br>
+✅  22. Dockeriser le projet avec Dockerfile et docker-compose.yml ✅ <br>
+✅ 23. Protéger les routes privées avec preHandler: fastify.authenticate <br> ✅
+✅ 24. Créer une route /register pour permettre à un utilisateur de s’inscrire <br> ✅
+✅ 25. Hasher le mot de passe dans /register avec bcrypt ✅ <br>
+✅ 26. Vérifier le mot de passe hashé dans /login avec bcrypt.compare() ✅<br>
+✅ 27. Vérifier et uniformiser les erreurs (400, 401, 500, etc.) dans toutes les routes ✅<br>
 
 <br>
 <br>
 <br>
-A FAIRE DEMAIN 23 mars 2025
--------------
-✅ 1. Récupérer username, email, password	depuis request.body
-🔐 2. Hasher le mot de passe	avec bcrypt.hash()
-🔍 3. Vérifier si l’email existe déjà	requête SELECT * FROM users WHERE email = ?
-🗃️ 4. Insérer le nouvel utilisateur	dans la base (db.run(...))
-📩 5. Renvoyer une réponse JSON	ex : { message: "User registered" }
-----------
+
+Authentification 2FA <br>
+
 Commandes utiles:
 
 - Aller sur la page d'accueil: <br>

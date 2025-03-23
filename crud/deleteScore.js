@@ -8,8 +8,8 @@ const deleteScoreById = (request, reply) =>
 		if (err)
 			return reply.status(500).send({ message: "Database error" });
 		if (this.changes === 0)
-			return reply.status(404).send({ message: "User not found" });
-		reply.send({ message: "Score deleted successfully" });
+			return reply.status(404).send({ message: "Score not found" });
+		return reply.status(200).send({ message: "Score deleted successfully" });
 	})
 }
 

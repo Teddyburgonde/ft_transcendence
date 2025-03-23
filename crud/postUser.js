@@ -7,13 +7,15 @@ const addUserHandler = (req, reply) =>
 		return reply.status(400).send({message: "All fields are mandatory."});
 	db.get("SELECT * FROM users WHERE email = ?", [email], (err, row) =>
 	{
+		if (err)
+			return reply.status(500).send({ message: "Database error" });
 		if (row)
 			return reply.status(400).send({message: "This email already exists."});
 		db.run('INSERT INTO users(username, email, password) VALUES (?, ?, ?)', [username, email, password], (err) => 
 		{
 			if (err)
 				return reply.status(500).send({ message: "Database error" });
-			reply.send('User added');	
+			reply.send({ "message": "User added" });	
 		});
 	});
 };

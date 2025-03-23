@@ -9,7 +9,7 @@ const  getScoresByUserId  = (request, reply) =>
 		  return reply.status(500).send({ message: "Database error" });
 		if (rows.length === 0)
 		  return reply.status(404).send({ message: "No scores found for this user" });
-		reply.send(rows);
+		return reply.status(200).send(rows);
 	});
 };
 

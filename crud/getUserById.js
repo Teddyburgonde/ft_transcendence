@@ -9,7 +9,8 @@ const getUserById = (request, reply) =>
 			return reply.status(500).send({ message: "Database error" });
 		if (!row)
 			return reply.status(404).send({ message: "User not found" });
-		reply.send(row);
+		const { id, username, email, avatar, create_at } = row;
+		reply.send({ id, username, email, avatar, create_at });
 	})
 };
 
