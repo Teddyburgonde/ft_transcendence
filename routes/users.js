@@ -4,7 +4,7 @@ import { getUserById } from '../crud/getUserById.js'
 import { updateUser } from '../crud/updateUser.js'
 import { deleteUserById } from '../crud/deleteUser.js';
 import { loginUserHandler } from '../crud/loginUser.js';
-
+import {registerUserHandler } from '../crud/registerUser.js'
 
 export default async function usersRoutes(fastify, options) 
 {
@@ -32,4 +32,5 @@ export default async function usersRoutes(fastify, options)
 		preHandler: fastify.authenticate
 	},	deleteUserById);
 	fastify.post('/login', loginUserHandler);
+	fastify.post('/register', registerUserHandler);
 }
