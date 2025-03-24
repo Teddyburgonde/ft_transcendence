@@ -2,22 +2,28 @@
 import Fastify from 'fastify'
 import fastifyJwt from '@fastify/jwt';
 import dotenv from 'dotenv';
-dotenv.config();
+import fastifyTOTP from 'fastify-totp';
 
 // Import des routes
 import homeRoutes from './routes/home.js';
 import usersRoutes from './routes/users.js';
 import scoresRoutes from './routes/scores.js';
+import twofaRoutes from './routes/2fa.js';
+
+
+dotenv.config();
 
 // Fastify function to create a server
 const fastify = Fastify(
 {
 	// Different options
-
+	
 	// Activate logs
 	logger: true
 })
 
+fastify.register(twofaRoutes);
+fastify.register(fastifyTOTP);
 
 fastify.register(fastifyJwt,
 {

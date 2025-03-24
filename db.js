@@ -17,6 +17,7 @@ db.serialize(()=>
 		username TEXT UNIQUE NOT NULL,
 		email TEXT UNIQUE NOT NULL,
 		password TEXT NOT NULL,
+		twofa_secret TEXT,
 		avatar TEXT,
 		created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 	)`);
