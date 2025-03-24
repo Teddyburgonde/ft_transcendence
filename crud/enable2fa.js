@@ -1,5 +1,4 @@
 import db from '../db.js'
-// je viens de tester la db ici 
 import { promisify } from 'util'; 
 
 const enable2FAHandler = async  (request, reply) =>

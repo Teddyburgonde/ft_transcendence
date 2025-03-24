@@ -4,7 +4,7 @@ import { getUserById } from '../crud/getUserById.js'
 import { updateUser } from '../crud/updateUser.js'
 import { deleteUserById } from '../crud/deleteUser.js';
 import { loginUserHandler } from '../crud/loginUser.js';
-import {registerUserHandler } from '../crud/registerUser.js'
+import { registerUserHandler } from '../crud/registerUser.js'
 
 export default async function usersRoutes(fastify, options) 
 {
