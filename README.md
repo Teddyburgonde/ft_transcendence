@@ -47,10 +47,41 @@ Etapes pour avoir un back fonctionnel: <br> <br>
 ✅ 26. Vérifier le mot de passe hashé dans /login avec bcrypt.compare() ✅<br>
 ✅ 27. Vérifier et uniformiser les erreurs (400, 401, 500, etc.) dans toutes les routes ✅<br>
 
+
+
+FRONT: 
+
+1️⃣ Initialisation du projet <br><br>
+
+
+✅1. Initialiser le projet avec React et TypeScript✅ <br>
+
+2. Installer Tailwind CSS ❌ <br> 
+
+3. Configurer Tailwind ❌ <br> 
+
+
+2️⃣ Creation des pages <br><br>
+
+1. Créer la page /home ❌ <br> 
+
+2. Ajouter React Router pour gérer les routes SPA ❌ <br> 
+
+
+
+<br> <br>
+
+
+
+
+
+
+
+
+
 6️⃣ Module  <br> <br>
 
 ✅ Authentification 2FA <br> ✅
-
 <br>
 <br>
 <br>
