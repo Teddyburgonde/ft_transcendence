@@ -54,12 +54,10 @@ FRONT:
 1️⃣ Initialisation du projet <br><br>
 
 
-✅1. Initialiser le projet avec React et TypeScript✅ <br>
+✅ 1. Initialiser le projet avec React et TypeScript ✅ <br>
 
-2. Installer Tailwind CSS ❌ <br> 
-
-3. Configurer Tailwind ❌ <br> 
-
+✅ 2. Installer Tailwind CSS ✅<br> 
+ 
 
 2️⃣ Creation des pages <br><br>
 
