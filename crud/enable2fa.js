@@ -17,8 +17,9 @@ const enable2FAHandler = async  (request, reply) =>
 
 	// Update user for stock the secret.ascii
 	await runAsync("UPDATE users SET twofa_secret = ? WHERE id = ? ", 
-	[secret.ascii, userId]);
-
+	[secret.base32, userId]);
+	
+	
 	// return qrcode
 	reply.send({qrcode});
 } 
