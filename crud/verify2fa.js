@@ -13,8 +13,6 @@ const verify2FAHandler = async (request, reply) =>
 		return reply.status(400).send({ message: "2FA not set up for this user" });
 	const secret = row.twofa_secret;
 	const isValid = request.server.totp.verify({ secret, token, encoding: "base32", window: 1, algorithm: "sha512" });
-	console.log("secret:", secret);
-	console.log("token:", token);
 	if (isValid)
 		return reply.status(200).send({message:"2FA verified"});
 	return reply.status(401).send({message:"Invalid 2FA code"});

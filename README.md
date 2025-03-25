@@ -40,25 +40,54 @@ Etapes pour avoir un back fonctionnel: <br> <br>
 ✅ 19. Configurer un système d'authentification (ex: Token JWT) pour login ✅
 ✅ 20. Ajouter la gestion des erreurs pour chaque route <br>
 ✅ 21. Protéger les données sensibles (ex: ne jamais renvoyer les mots de passe) <br>
-✅  22. Dockeriser le projet avec Dockerfile et docker-compose.yml ✅ <br>
+✅ 22. Dockeriser le projet avec Dockerfile et docker-compose.yml ✅ <br>
 ✅ 23. Protéger les routes privées avec preHandler: fastify.authenticate <br> ✅
 ✅ 24. Créer une route /register pour permettre à un utilisateur de s’inscrire <br> ✅
 ✅ 25. Hasher le mot de passe dans /register avec bcrypt ✅ <br>
 ✅ 26. Vérifier le mot de passe hashé dans /login avec bcrypt.compare() ✅<br>
 ✅ 27. Vérifier et uniformiser les erreurs (400, 401, 500, etc.) dans toutes les routes ✅<br>
 
+6️⃣ Module  <br> <br>
+
+✅ Authentification 2FA <br> ✅
+
 <br>
 <br>
 <br>
 
-Authentification 2FA <br>
+
+1. Obtenir le token <br>
+```c
+curl -X POST http://localhost:3000/login \
+  -H "Content-Type: application/json" \
+  -d '{"email": "jean2@example.com", "password": "alain"}'
+```
+
+2. Obtenir le qrcode
+
+```c
+curl -X POST http://localhost:3000/enable-2fa \
+  -H "Authorization: Bearer <token>"
+
+```
+
+3. Verification du code de google authentificator
+
+```c
+curl -X POST http://localhost:3000/verify-2fa \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJqZWFuMkBleGFtcGxlLmNvbSIsImlhdCI6MTc0Mjg5NTg4MH0.NTirDyiuysBkmAzGi4r43B3aUv5kLYsHWTaZrwblAHs" \
+  -H "Content-Type: application/json" \
+  -d '{"token": "code a 6 chiffres"}'
+
+```
 
 Commandes utiles:
 
 - Aller sur la page d'accueil: <br>
+```c
 http://localhost:3000
 
-
+```
 
 Base de données: 
 
@@ -67,63 +96,87 @@ Si tu veux tester ton crud avec curl :
 Method POST pour users
 Ajouter une row dans ta base de données avec curl: <br>
 exemple: <br>
+```c
 curl -X POST http://localhost:3000/users \
   -H "Content-Type: application/json" \
   -d '{"username": "jean", "email": "jean@example.com", "password": "alain"}'
+```
+
 
 Method GET pour users
 Afficher la liste des rows dans ta base de données avec curl:<br>
+```c
 curl http://localhost:3000/users | jq
-
+```
 
 Method GET by ID pour users
 Afficher la liste d'un row dans ta base de données avec curl:<br>
+```c
 curl http://localhost:3000/users/2 | jq
-
+```
 
 Method Update pour users
 Update une row dans ta base de données avec curl:<br>
+
+```c
 curl -X PUT http://localhost:3000/users/1 \
   -H "Content-Type: application/json" \
   -d '{"username":"stan_updated","email":"stan@new.com","password":"supersecure"}' | jq
+```
+
 
 Method delete pour users
 Delete une row dans ta base de données avec curl: <br>
-curl -X DELETE http://localhost:3000/users/1 | jq
 
+```c
+curl -X DELETE http://localhost:3000/users/1 | jq
+```
 
 
 Method POST pour scores 
 Ajouter une row dans ta base de données avec curl: <br>
 exemple: <br>
+```c
 curl -X POST http://localhost:3000/scores \
   -H "Content-Type: application/json" \
   -d '{"user_id":1,"opponent_id":2,"score_user":5}' | jq
-
+```
 
 Method GET pour scores
 Afficher la liste des rows dans ta base de données avec curl:<br>
+
+```c
 curl http://localhost:3000/scores | jq
+```
+
 
 Method GET by ID pour users
 Afficher la liste d'un row dans ta base de données avec curl:<br>
-curl http://localhost:3000/scores/user/1 | jq
 
+```c
+curl http://localhost:3000/scores/user/1 | jq
+```
 
 Method delete pour scores
 Delete une row dans ta base de données avec curl: <br>
+```c
 curl -X DELETE http://localhost:3000/scores/1 | jq
+```
+
 
 Pour tester authentification JWT
+
+```c
 curl -X POST http://localhost:3000/login \
   -H "Content-Type: application/json" \
   -d '{"email": "stan@new.com", "password": "supersecure"}'
-
+```
 
 - Regarder ce qu'il y a dans la tables: 
+```c
 sqlite3 database.db <br>
 SELECT * FROM nameoftable; <br>
-
+```
 
 
 CROQUIS : 
@@ -134,7 +187,7 @@ CROQUIS :
 Liens utiles : 
 
 Pour le CRUD: 
-https://dev.to/elijahtrillionz/build-a-crud-api-with-fastify-688
+https://dev.to/elijahtrillionz/build-a-crud-api-with-fastify-688 <br>
 
 Doc officiel:
-https://fastify.dev/ 
+https://fastify.dev/ <br>
